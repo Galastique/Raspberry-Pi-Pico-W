@@ -1,8 +1,8 @@
 from machine import Pin
 from utime import sleep
-import dht
+from dht import DHT22
  
-sensor = dht.DHT22(Pin(2)) 
+sensor = DHT22(Pin(2)) 
  
 while True:
     sensor.measure()
