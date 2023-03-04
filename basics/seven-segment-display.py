@@ -5,8 +5,9 @@ mydisplay = tm1637.TM1637(clk=Pin(16), dio=Pin(17))
 
 #show a time with colon
 while True:
-    mydisplay.numbers(12,59)
-    sleep(0.5)
+    mydisplay.brightness(7)
+    mydisplay.numbers(12,54)
+    sleep(0.25)
  
 #adjust the brightness to make it loewr
 #mydisplay.brightness(0)
