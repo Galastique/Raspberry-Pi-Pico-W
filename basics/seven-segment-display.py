@@ -1,24 +1,27 @@
-import tm1637
+from tm1637 import TM1637
 from machine import Pin
 from utime import sleep
-mydisplay = tm1637.TM1637(clk=Pin(16), dio=Pin(17))
 
-#show a time with colon
+display = TM1637(clk=Pin(1), dio=Pin(0))
+display.brightness(7)
+
+#Display 1 number
+#display.number(21)
+
+#Display 2 numbers
 while True:
-    mydisplay.numbers(12,59)
-    sleep(0.5)
+    display.brightness(7)
+    display.numbers(12,54)
+    sleep(0.25)
  
-#adjust the brightness to make it loewr
-#mydisplay.brightness(0)
-#sleep(1)
+#Display text
+#mydisplay.show("Pico")
+
+#Display scrolling text
+#display.scroll("balls", delay=200)
  
-#show scrolling text
-#mydisplay.scroll("Hello World 123", delay=200)
-#sleep(1)
+#Display temperature
+#display.temperature(69)
  
-#show temperature
-#mydisplay.temperature(99)
-#sleep(1)
- 
-#blank the screen again
-#mydisplay.show(" ")
+#Clear screen
+#display.show(" ")
