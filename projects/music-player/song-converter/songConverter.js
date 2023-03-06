@@ -60,6 +60,10 @@ for(let i = 0; i < lines.length; i++){
         combineGroup(group);
         group = [];
     }
+
+    if(i + 1 == lines.length){
+        combineGroup(group);
+    }
 }
 
 //Outputs song into file
