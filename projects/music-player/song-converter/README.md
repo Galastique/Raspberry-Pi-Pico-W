@@ -4,6 +4,6 @@
 2. Paste the song in a text file named "song.txt" within the same directory
 3. Run the following powershell command: `node songConverter.js` (or simply double click the `.js` file if you have node.js installed)
 
-DISPLAIMER: This will not work if multiple notes are played at once. My code for the music player only uses a single XHD buzzer, not multiple. At some point in the future it will support more, but for now you will have to deal with this.
+If you have connected more than 1 buzzer to your Raspberry Pi Pico, you're in luck! My code supports up to 3 buzzers at once to allow multiple different notes being played at once. This allows to play more complex sounds. It also prevents the program from crashing if the converted song contains 2 or more notes at once.
 
 An example text file is provided for reference (Megalovania)
